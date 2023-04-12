@@ -19,7 +19,7 @@ public class Users {
         // Connect to the database
         String url = "jdbc:mysql://localhost/cashmachine";
         String query = "UPDATE accounts SET amount = ? WHERE id = ?";
-        try (Connection conn = DriverManager.getConnection(url, "root", "password");
+        try (Connection conn = DriverManager.getConnection(url, "your_username", "your_password");
              PreparedStatement pstmt = conn.prepareStatement(query)) {
             pstmt.setInt(1, new_amount);
             pstmt.setInt(2, id);
@@ -37,7 +37,7 @@ public class Users {
 
         // Connect to the database
         String url = "jdbc:mysql://localhost/cashmachine";
-        Connection conn = DriverManager.getConnection(url, "root", "password");
+        Connection conn = DriverManager.getConnection(url, "your_username", "your_username");
 
         // Create a statement object
         Statement stmt = conn.createStatement();
